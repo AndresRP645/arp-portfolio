@@ -28,8 +28,8 @@ const Container = styled.div`
   height: 13rem;
   width: 20rem;
   background-color: #4e5156;
-  margin: 0 0.5rem;
-  padding: 0.5rem;
+  margin: 0 1rem;
+  padding: 1rem;
   border-radius: 20px;
   cursor: pointer;
   position: relative;

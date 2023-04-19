@@ -25,8 +25,8 @@ const Project = (props) => {
 export default Project;
 
 const Container = styled.div`
-  height: 230px;
-  width: 360px;
+  height: 11rem;
+  width: 15rem;
   background-color: #4e5156;
   margin: 0 0.5rem;
   padding: 0.5rem;

@@ -65,8 +65,9 @@ const Container = styled.div`
   }
 
   .slick-dots {
-    text-align: left;
+    text-align: center;
     margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .slick-dots li button:before {

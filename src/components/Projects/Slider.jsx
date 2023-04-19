@@ -15,7 +15,6 @@ const SliderComp = () => {
       <Slider ref={arrowRef} {...settings}>
       {sliderProject}
       </Slider>
-      <br />
       <Buttons>
         <button 
         onClick={() => arrowRef.current.slickPrev()}

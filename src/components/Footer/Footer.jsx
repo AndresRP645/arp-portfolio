@@ -10,13 +10,7 @@ import { Slide, Zoom, Fade } from "react-awesome-reveal";
 import swal from 'sweetalert';
 
 class Footer extends Component{
-  scrollUp = () => {
-    window.scroll({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
+  
   handleSubmit = (event) => {
     event.preventDefault();
   
@@ -164,6 +158,13 @@ class Footer extends Component{
 };
 
 export default Footer;
+
+const scrollUp = () => {
+  window.scroll({
+    top: 0,
+    behavior: "smooth",
+  });
+};
 
 const Container = styled.div`
   margin-top: 2rem;

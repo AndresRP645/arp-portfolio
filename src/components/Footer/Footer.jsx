@@ -22,8 +22,8 @@ class Footer extends Component{
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     })
-      .then(() => alert("Thank you for your submission"))
-      .catch((error) => alert(error));
+      .then(() => swal("Mensaje Enviado", "Tu mensaje ha sido enviado correctamente", "success"))
+      .catch((error) => swal("Ha ocurrido un error", error, "error"));
   };
 
   render(){

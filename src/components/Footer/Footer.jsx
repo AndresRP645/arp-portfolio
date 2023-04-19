@@ -1,191 +1,126 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import { MdAlternateEmail } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { AiOutlineArrowUp } from "react-icons/ai";
 import { FiMail, FiPhoneCall } from "react-icons/fi";
-import {
-  FaLinkedinIn,
-  FaFacebookF,
-  FaInstagram,
-  FaTwitter,
-  FaTelegram,
-  FaWhatsapp,
-  FaGithub,
-} from "react-icons/fa";
+import { FaLinkedinIn, FaFacebookF, FaInstagram, FaTwitter, FaTelegram, FaWhatsapp, FaGithub } from "react-icons/fa";
 import { Slide, Zoom, Fade } from "react-awesome-reveal";
-import swal from "sweetalert";
+import swal from 'sweetalert';
 
-class Footer extends Component {
-  render() {
-    return (
-      <Container id="footer">
-        <Profile>
-          <Slide direction="left" delay={1}>
-            <h1>Andrés Rosales</h1>
+const Footer = () => {
+  const scrollUp = () => {
+    window.scroll({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+  return (
+    <Container id="footer">
+      <Profile>
+        <Slide direction="left" delay={1}>
+          <h1>Andrés Rosales</h1>
+        </Slide>
+        <div className="address">
+          <Slide direction="left">
+            <h1>Ciudad:</h1>
           </Slide>
-          <div className="address">
+          <Slide direction="left">
+            <p>Chimalhuacán, Estado de México. C.P. 56353</p>
+          </Slide>
+        </div>
+        <div className="links">
+          <Slide direction="left">
+            <h1>Contacta directamente conmigo:</h1>
+          </Slide>
+          <div>
+            <span>
+              <FiPhoneCall />
+            </span>
             <Slide direction="left">
-              <h1>Ciudad:</h1>
-            </Slide>
-            <Slide direction="left">
-              <p>Chimalhuacán, Estado de México. C.P. 56353</p>
+              <a href="tel:+525581807893">+52 55 81807893</a>
             </Slide>
           </div>
-          <div className="links">
+          <div>
             <Slide direction="left">
-              <h1>Contacta directamente conmigo:</h1>
-            </Slide>
-            <div>
               <span>
-                <FiPhoneCall />
+                <HiOutlineMailOpen />
               </span>
-              <Slide direction="left">
-                <a href="tel:+525581807893">+52 55 81807893</a>
-              </Slide>
-            </div>
-            <div>
-              <Slide direction="left">
-                <span>
-                  <HiOutlineMailOpen />
-                </span>
-              </Slide>
-              <Slide>
-                <a href="mailto:andresrp645@gmail.com">andresrp645@gmail.com</a>
-              </Slide>
-            </div>
-          </div>
-          <div className="profiles">
-            <Slide direction="left">
-              <h1>Redes Sociales</h1>
             </Slide>
-            <div className="icons">
-              <Zoom>
-                <span>
-                  <a href="https://www.facebook.com/AlexRosewall">
-                    <FaFacebookF />
-                  </a>
-                </span>
-              </Zoom>
-              <Zoom>
-                <span>
-                  <a href="https://twitter.com/alex_rosewall">
-                    <FaTwitter />
-                  </a>
-                </span>
-              </Zoom>
-              <Zoom>
-                <span>
-                  <a href="https://www.instagram.com/alex_rosewall/">
-                    <FaInstagram />
-                  </a>
-                </span>
-              </Zoom>
-              <Zoom>
-                <span>
-                  <a href="http://wa.me/525581807893/">
-                    <FaWhatsapp />
-                  </a>
-                </span>
-              </Zoom>
-              <Zoom>
-                <span>
-                  <a href="https://t.me/Alex_Rosewall">
-                    <FaTelegram />
-                  </a>
-                </span>
-              </Zoom>
-              <Zoom>
-                <span>
-                  <a href="https://github.com/AndresRP645">
-                    <FaGithub />
-                  </a>
-                </span>
-              </Zoom>
-              <Zoom>
-                <span>
-                  <a href="https://www.linkedin.com/in/andru00e9s-rosales-paredes-a200b021b/">
-                    <FaLinkedinIn />
-                  </a>
-                </span>
-              </Zoom>
-            </div>
+            <Slide>
+              <a href="mailto:andresrp645@gmail.com">andresrp645@gmail.com</a>
+            </Slide>
           </div>
-          <Fade>
-            <ArrowUp onClick={scrollUp}>
-              <AiOutlineArrowUp />
-            </ArrowUp>
-          </Fade>
-        </Profile>
-        <Form>
-          <Slide direction="right">
-            <form
-              id="contact"
-              name="contact"
-              method="POST"
-              onSubmit={submit}
-              data-netlify="true"
-            >
-              <div className="name">
-                <span>
-                  <CgProfile />
-                </span>
-                <input
-                  type="text"
-                  name="Nombre"
-                  placeholder="Ingresa tu Nombre Completo"
-                />
-              </div>
-              <div className="email">
-                <span>
-                  <MdAlternateEmail />
-                </span>
-                <input
-                  type="email"
-                  name="correo"
-                  placeholder="ingresa tu email"
-                />
-              </div>
-              <div className="message">
-                <span className="messageIcon">
-                  <FiMail />
-                </span>
-                <textarea
-                  cols="30"
-                  rows="10"
-                  name="mensaje"
-                  placeholder="Ingresa tu mensaje"
-                ></textarea>
-              </div>
-              <button type="submit">Enviar</button>
-            </form>
+        </div>
+        <div className="profiles">
+          <Slide direction="left">
+            <h1>Redes Sociales</h1>
           </Slide>
-        </Form>
-      </Container>
-    );
-  }
-}
+          <div className="icons">
+            
+            <Zoom>
+            <span>
+                <a href="https://www.facebook.com/AlexRosewall">
+                  <FaFacebookF />
+                </a>
+              </span>
+            </Zoom>
+            <Zoom>
+            <span>
+                <a href="https://twitter.com/alex_rosewall">
+                  <FaTwitter />
+                </a>
+              </span>
+            </Zoom>
+            <Zoom>
+            <span>
+                <a href="https://www.instagram.com/alex_rosewall/">
+                  <FaInstagram />
+                </a>
+              </span>
+            </Zoom>
+            <Zoom>
+            <span>
+                <a href="http://wa.me/525581807893/">
+                  <FaWhatsapp />
+                </a>
+              </span>
+            </Zoom>
+            <Zoom>
+            <span>
+                <a href="https://t.me/Alex_Rosewall">
+                  <FaTelegram />
+                </a>
+              </span>
+            </Zoom>
+            <Zoom>
+              <span>
+                <a href="https://github.com/AndresRP645">
+                  <FaGithub />
+                </a>
+              </span>
+            </Zoom>
+            <Zoom>
+            <span>
+                <a href="https://www.linkedin.com/in/andru00e9s-rosales-paredes-a200b021b/">
+                  <FaLinkedinIn />
+                </a>
+              </span>
+            </Zoom>
+          </div>
+        </div>
+        <Fade>
+          <ArrowUp onClick={scrollUp}>
+            <AiOutlineArrowUp />
+          </ArrowUp>
+        </Fade>
+      </Profile>
+    </Container>
+  );
+};
 
 export default Footer;
-
-const submit = () => {
-  return swal({
-    title: "Mensaje enviado",
-    text: "Tu mensaje ha sido enviado correctamente",
-    icon: "success",
-    button: "ok",
-  }).then((ban) => {
-    return ban;
-  });
-};
-
-const scrollUp = () => {
-  window.scroll({
-    top: 0,
-    behavior: "smooth",
-  });
-};
 
 const Container = styled.div`
   margin-top: 2rem;
@@ -336,10 +271,10 @@ const Form = styled.div`
       background-color: #c073ffef;
       border: none;
       border-radius: 5px;
-      filter: drop-shadow(0px 4px 5px #c073ffef);
+      filter: drop-shadow(0px 4px 5px #d4a6faef);
       cursor: pointer;
       :hover {
-        filter: drop-shadow(0px 6px 9px #c073ffef);
+        filter: drop-shadow(0px 6px 9px #d4a6faef);
       }
     }
   }

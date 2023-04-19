@@ -18,7 +18,6 @@ const Courses = () => {
       <Course>
         <Slider ref={arrowRef} {...settings}>
           {clientDisc}
-          <br /><br />
         </Slider>
         <Buttons>
           <button onClick={() => arrowRef.current.slickPrev()}>
@@ -64,6 +63,7 @@ const Container = styled.div`
   .slick-dots {
     text-align: left;
     margin-left: 1rem;
+    margin-top: 2rem; 
   }
 
   .slick-dots li button:before {
@@ -86,6 +86,7 @@ const Container = styled.div`
 
   .slick-dots li.slick-active button {
     background: #c073ffef;
+    color: #c073ffef;
     width: 15px;
   }
 

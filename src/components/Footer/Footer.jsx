@@ -10,19 +10,7 @@ import { Slide, Zoom, Fade } from "react-awesome-reveal";
 import swal from 'sweetalert';
 
 const Footer = () => {
-  let navigate = useNavigate();
-  const submitHandler = (e) =>{
-    e.preventDefault();
-    let myForm = document.getElementById("contact");
-    let formData = new FormData(myForm);
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => alert("Thank you for your submission"))
-      .catch((error) => alert(error));
-  }
+
   const scrollUp = () => {
     window.scroll({
       top: 0,

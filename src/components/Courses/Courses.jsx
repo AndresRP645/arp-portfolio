@@ -19,6 +19,7 @@ const Courses = () => {
         <Slider ref={arrowRef} {...settings}>
           {clientDisc}
         </Slider>
+        <br />
         <Buttons>
           <button onClick={() => arrowRef.current.slickPrev()}>
             <IoIosArrowBack />
@@ -84,7 +85,7 @@ const Container = styled.div`
   }
 
   .slick-dots li.slick-active button {
-    background: #01be96;
+    background: #c073ffef;
     width: 15px;
   }
 

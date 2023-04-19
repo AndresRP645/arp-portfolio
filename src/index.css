@@ -77,7 +77,7 @@ a {
   pointer-events: none;
 }
 
-@media(max-width: 990px){
+@media(max-width: 1000px){
   .center .slick-center .project{
     transform: scale(1);
   }

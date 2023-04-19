@@ -114,7 +114,7 @@ class Footer extends Component{
         </Profile>
         <Form>
           <Slide direction="right">
-            <form id="contact" name="contact" method="POST" onSubmit={swal("Mensaje Enviado", "Tu mensaje ha sido enviado correctamente", "success")} data-netlify="true">
+            <form id="contact" name="contact" method="POST" action="/" onSubmit={submit} data-netlify="true">
               <div className="name">
                 <span>
                   <CgProfile />
@@ -143,6 +143,10 @@ class Footer extends Component{
 };
 
 export default Footer;
+
+const submit = () => {
+  swal("Mensaje Enviado", "Tu mensaje ha sido enviado correctamente", "success")
+}
 
 const scrollUp = () => {
   window.scroll({

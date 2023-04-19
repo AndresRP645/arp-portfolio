@@ -57,13 +57,13 @@ const Container = styled.div`
   .slick-list,
   .slick-slider,
   .slick-track {
-    padding: 2rem;
+    padding: 0;
   }
 
   .slick-dots {
     text-align: left;
     margin-left: 1rem;
-    padding: 2rem; 
+    padding: 1rem; 
   }
 
   .slick-dots li button:before {

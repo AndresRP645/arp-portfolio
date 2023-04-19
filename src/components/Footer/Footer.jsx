@@ -124,7 +124,7 @@ class Footer extends Component {
               id="contact"
               name="contact"
               method="POST"
-              action="/"
+              action="#"
               onSubmit={submit}
               data-netlify="true"
             >

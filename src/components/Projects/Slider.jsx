@@ -76,7 +76,7 @@ let data = [
       img : "/projects/portfolio.jpg",
       title: "Portafolio Web",
       disc : "Portafolio WebApp creado con React.",
-      link: "https://github.com/AndresRP645/andres-rosales-portfolio"
+      link: "https://github.com/AndresRP645/arp-portfolio"
   },
   {
       img : "/projects/apreciacion.jpg",

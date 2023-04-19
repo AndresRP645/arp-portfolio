@@ -10,21 +10,6 @@ import { Slide, Zoom, Fade } from "react-awesome-reveal";
 import swal from 'sweetalert';
 
 class Footer extends Component{
-  
-  handleSubmit = (event) => {
-    event.preventDefault();
-  
-    const myForm = event.target;
-    const formData = new FormData(myForm);
-    
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => swal("Mensaje Enviado", "Tu mensaje ha sido enviado correctamente", "success"))
-      .catch((error) => swal("Ha ocurrido un error", error, "error"));
-  };
 
   render(){
     return (
@@ -129,7 +114,7 @@ class Footer extends Component{
         </Profile>
         <Form>
           <Slide direction="right">
-            <form id="contact" name="contact" method="POST" data-netlify="true">
+            <form id="contact" name="contact" method="POST" onSubmit={swal("Mensaje Enviado", "Tu mensaje ha sido enviado correctamente", "success")} data-netlify="true">
               <div className="name">
                 <span>
                   <CgProfile />

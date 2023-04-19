@@ -77,9 +77,13 @@ a {
   pointer-events: none;
 }
 
-@media(max-width: 1000px){
+@media(max-width: 990px){
   .center .slick-center .project{
     transform: scale(1);
+  }
+
+  .project-container{
+    height: 15rem;
   }
 
   .center .project{

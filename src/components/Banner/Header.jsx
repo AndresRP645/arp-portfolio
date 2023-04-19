@@ -99,7 +99,7 @@ const Nav = styled.div`
         position: fixed;
         display: flex;
         flex-direction: column;
-        background-color: linear-gradient(159deg,#2d2d3a,#2b2b35);
+        background-color: rgb(45, 45, 58);
         inset: 0;
         justify-content: center;
         align-items: center;

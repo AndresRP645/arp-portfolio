@@ -5,8 +5,6 @@ import {
   FaFacebookF,
   FaInstagram,
   FaTwitter,
-  FaTelegram,
-  FaWhatsapp,
   FaMailBulk,
 } from "react-icons/fa";
 import { Slide } from "react-awesome-reveal";

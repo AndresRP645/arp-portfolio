@@ -7,6 +7,7 @@ import { AiOutlineArrowUp } from "react-icons/ai";
 import { FiMail, FiPhoneCall } from "react-icons/fi";
 import { FaLinkedinIn, FaFacebookF, FaInstagram, FaTwitter, FaTelegram, FaWhatsapp, FaGithub } from "react-icons/fa";
 import { Slide, Zoom, Fade } from "react-awesome-reveal";
+import swal from 'sweetalert';
 
 const Footer = () => {
   const scrollUp = () => {
@@ -117,7 +118,7 @@ const Footer = () => {
       </Profile>
       <Form>
         <Slide direction="right">
-          <form name="contact" method="POST" data-netlify="true">
+          <form name="contact" action={swal("Enviado!", "Tu mensaje ha sido enviado correctamente", "success")} method="POST" data-netlify="true">
             <div className="name">
               <span>
                 <CgProfile />
@@ -136,7 +137,7 @@ const Footer = () => {
               </span>
               <textarea cols="30" rows="10" name="mensaje" placeholder="Ingresa tu mensaje"></textarea>
             </div>
-            <button>Enviar</button>
+            <button type="submit">Enviar</button>
           </form>
         </Slide>
       </Form>
@@ -292,7 +293,7 @@ const Form = styled.div`
     button {
       width: 5rem;
       height: 1.8rem;
-      background-color: #01be96;
+      background-color: #c073ffef;
       border: none;
       border-radius: 5px;
       filter: drop-shadow(0px 4px 5px #01be9551);

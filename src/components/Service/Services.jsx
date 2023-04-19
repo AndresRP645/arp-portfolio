@@ -12,13 +12,11 @@ const Services = () => {
         </h4>
         <h1>Tecnologías que manejo</h1>
       </Slide>
-      <Slide direction="up">
         <Cards>
           {skills.map((skill, i) => (
             <Card Icon={`/skills/${skill.image}`} title={skill.title} key={i} />
           ))}
         </Cards>
-      </Slide>
     </Container>
   );
 };

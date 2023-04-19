@@ -1,17 +1,24 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
 import { MdAlternateEmail } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { AiOutlineArrowUp } from "react-icons/ai";
 import { FiMail, FiPhoneCall } from "react-icons/fi";
-import { FaLinkedinIn, FaFacebookF, FaInstagram, FaTwitter, FaTelegram, FaWhatsapp, FaGithub } from "react-icons/fa";
+import {
+  FaLinkedinIn,
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaTelegram,
+  FaWhatsapp,
+  FaGithub,
+} from "react-icons/fa";
 import { Slide, Zoom, Fade } from "react-awesome-reveal";
-import swal from 'sweetalert';
+import swal from "sweetalert";
 
-class Footer extends Component{
-
-  render(){
+class Footer extends Component {
+  render() {
     return (
       <Container id="footer">
         <Profile>
@@ -54,37 +61,36 @@ class Footer extends Component{
               <h1>Redes Sociales</h1>
             </Slide>
             <div className="icons">
-              
               <Zoom>
-              <span>
+                <span>
                   <a href="https://www.facebook.com/AlexRosewall">
                     <FaFacebookF />
                   </a>
                 </span>
               </Zoom>
               <Zoom>
-              <span>
+                <span>
                   <a href="https://twitter.com/alex_rosewall">
                     <FaTwitter />
                   </a>
                 </span>
               </Zoom>
               <Zoom>
-              <span>
+                <span>
                   <a href="https://www.instagram.com/alex_rosewall/">
                     <FaInstagram />
                   </a>
                 </span>
               </Zoom>
               <Zoom>
-              <span>
+                <span>
                   <a href="http://wa.me/525581807893/">
                     <FaWhatsapp />
                   </a>
                 </span>
               </Zoom>
               <Zoom>
-              <span>
+                <span>
                   <a href="https://t.me/Alex_Rosewall">
                     <FaTelegram />
                   </a>
@@ -98,7 +104,7 @@ class Footer extends Component{
                 </span>
               </Zoom>
               <Zoom>
-              <span>
+                <span>
                   <a href="https://www.linkedin.com/in/andru00e9s-rosales-paredes-a200b021b/">
                     <FaLinkedinIn />
                   </a>
@@ -114,24 +120,44 @@ class Footer extends Component{
         </Profile>
         <Form>
           <Slide direction="right">
-            <form id="contact" name="contact" method="POST" action="/" onSubmit={submit} data-netlify="true">
+            <form
+              id="contact"
+              name="contact"
+              method="POST"
+              action="/"
+              onSubmit={submit}
+              data-netlify="true"
+            >
               <div className="name">
                 <span>
                   <CgProfile />
                 </span>
-                <input type="text" name="Nombre" placeholder="Ingresa tu Nombre Completo" />
+                <input
+                  type="text"
+                  name="Nombre"
+                  placeholder="Ingresa tu Nombre Completo"
+                />
               </div>
               <div className="email">
                 <span>
                   <MdAlternateEmail />
                 </span>
-                <input type="email" name="correo" placeholder="ingresa tu email" />
+                <input
+                  type="email"
+                  name="correo"
+                  placeholder="ingresa tu email"
+                />
               </div>
               <div className="message">
                 <span className="messageIcon">
                   <FiMail />
                 </span>
-                <textarea cols="30" rows="10" name="mensaje" placeholder="Ingresa tu mensaje"></textarea>
+                <textarea
+                  cols="30"
+                  rows="10"
+                  name="mensaje"
+                  placeholder="Ingresa tu mensaje"
+                ></textarea>
               </div>
               <button type="submit">Enviar</button>
             </form>
@@ -140,13 +166,20 @@ class Footer extends Component{
       </Container>
     );
   }
-};
+}
 
 export default Footer;
 
 const submit = () => {
-  swal("Mensaje Enviado", "Tu mensaje ha sido enviado correctamente", "success")
-}
+  return swal({
+    title: "Mensaje enviado",
+    text: "Tu mensaje ha sido enviado correctamente",
+    icon: "success",
+    button: "ok",
+  }).then((ban) => {
+    return ban;
+  });
+};
 
 const scrollUp = () => {
   window.scroll({

@@ -1,5 +1,12 @@
 ## Portafolio using Reactjs
 
+## Features
+
+- Animated navbar
+- Slider
+- Animation on scroll
+- Responsive
+
 ## Descripción
 
 Este portafolio está construido usando React JS, Styled-Components y la biblioteca de revelación impresionante de React. Las personas pueden ver las skills del propietario, los proyectos, las certificaciones y también tiene un formulario de contacto para que las personas se comuniquen.

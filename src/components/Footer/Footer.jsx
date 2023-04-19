@@ -10,12 +10,11 @@ import { Slide, Zoom, Fade } from "react-awesome-reveal";
 import swal from 'sweetalert';
 
 const Footer = () => {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-  
-    const myForm = event.target;
-    const formData = new FormData(myForm);
-    
+  let navigate = useNavigate()
+  const submitHandler = (e) =>{
+    e.preventDefault();
+    let myForm = document.getElementById("contact");
+    let formData = new FormData(myForm);
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -23,11 +22,6 @@ const Footer = () => {
     })
       .then(() => alert("Thank you for your submission"))
       .catch((error) => alert(error));
-  };
-  
-  document
-    .querySelector("form")
-    .addEventListener("submit", handleSubmit);
 
   const scrollUp = () => {
     window.scroll({
@@ -137,7 +131,7 @@ const Footer = () => {
       </Profile>
       <Form>
         <Slide direction="right">
-          <form name="contact" method="POST" data-netlify="true">
+          <form id="contact" name="contact" method="POST" data-netlify="true">
             <div className="name">
               <span>
                 <CgProfile />

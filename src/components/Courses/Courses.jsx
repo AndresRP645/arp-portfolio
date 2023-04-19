@@ -15,11 +15,11 @@ const Courses = () => {
         <span className="purple">Cursos y</span>
         <h1>Certificaciones</h1>
       </Slide>
-      <Testimonials>
+      <Course>
         <Slider ref={arrowRef} {...settings}>
           {clientDisc}
+          <br /><br />
         </Slider>
-        <br />
         <Buttons>
           <button onClick={() => arrowRef.current.slickPrev()}>
             <IoIosArrowBack />
@@ -28,7 +28,7 @@ const Courses = () => {
             <IoIosArrowForward />
           </button>
         </Buttons>
-      </Testimonials>
+      </Course>
     </Container>
   );
 };
@@ -94,7 +94,7 @@ const Container = styled.div`
   }
 `;
 
-const Testimonials = styled.div`
+const Course = styled.div`
   margin-top: 2rem;
   position: relative;
 `;
@@ -107,7 +107,7 @@ const Buttons = styled.div`
     background-color: transparent;
     margin-left: 0.5rem;
     border: none;
-    color: #01be96;
+    color: #c073ffef;
     cursor: pointer;
     font-size: 1.1rem;
   }

@@ -61,7 +61,7 @@ const Container = styled.div`
   }
 
   .slick-list{
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
   }
 
   .slick-dots {

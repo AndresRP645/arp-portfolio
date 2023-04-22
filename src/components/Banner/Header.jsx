@@ -12,9 +12,9 @@ const Header = () => {
         </Logo>
         <Nav bar={bar}>
             <span><a href="#home">Inicio</a></span>
-            <span><a href="#service">Cursos y Certificaciones</a></span>
+            <span><a href="#skills">Skills</a></span>
             <span><a href="#project">Proyectos</a></span>
-            <span><a href="#client">Skills</a></span>
+            <span><a href="#courses">Cursos y Certificaciones</a></span>
             <span><a href="#footer">Contacto</a></span>
         </Nav>
         <div

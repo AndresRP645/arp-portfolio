@@ -10,7 +10,7 @@ const Courses = () => {
   let clientDisc = "";
   clientDisc = courses.map((item, i) => <CourseSlider item={item} key={i} />);
   return (
-    <Container id="client">
+    <Container id="courses">
       <Slide direction="left">
         <span className="purple">Cursos y</span>
         <h1>Certificaciones</h1>
